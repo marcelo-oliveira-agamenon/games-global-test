@@ -3,14 +3,18 @@ import {
   GAME_FETCH_LOADING,
   GAME_FETCH_SUCCEEDED,
 } from '../actions';
+import { ActionsSaga, InitialState } from '../interfaces/saga';
 
-const initialState = {
+const initialState: InitialState = {
   games: [],
   loadingFetchGames: false,
   errorFetchGames: '',
 };
 
-export default function reduxSagaReducer(state = initialState, action) {
+export default function reduxSagaReducer(
+  state = initialState,
+  action: ActionsSaga
+) {
   switch (action.type) {
     case GAME_FETCH_LOADING: {
       return {

@@ -1,3 +1,5 @@
+import { Game } from './game';
+
 export interface ResponseGenerator {
   config?: any;
   data?: any;
@@ -5,4 +7,16 @@ export interface ResponseGenerator {
   request?: any;
   status?: number;
   statusText?: string;
+}
+
+export interface InitialState {
+  games: Game[];
+  loadingFetchGames: boolean;
+  errorFetchGames: string;
+}
+
+export interface ActionsSaga {
+  type: string;
+  games?: Game[];
+  message?: string;
 }
