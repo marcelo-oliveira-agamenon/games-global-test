@@ -1,6 +1,8 @@
 {
   "name": "games-global-test",
   "version": "0.1.0",
+  "repository": "https://github.com/marcelo-oliveira-agamenon/games-global-test",
+  "author": "Marcelo Ferreira Oliveira <https://www.linkedin.com/in/marcelo-oliveira-44687b146/>",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.8",
@@ -28,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -48,7 +51,19 @@
       "last 1 safari version"
     ]
   },
+  "lint-staged": {
+    "*.{ts,tsx,json,md}": [
+      "eslint — fix"
+    ],
+    "**/*": "prettier — write — ignore-unknown"
+  },
   "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "babel-loader": "^9.1.2",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.2",
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1"
   }
