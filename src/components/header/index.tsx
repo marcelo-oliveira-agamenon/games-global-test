@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './style.scss';
 
 interface IHeader {
@@ -11,7 +12,7 @@ export default function Header({ onOpenSidebar }: IHeader) {
         icon menu
       </div>
 
-      <h1>Gamble's Den</h1>
+      <Link to="/">Gamble's Den</Link>
     </div>
   );
 }

@@ -2,6 +2,8 @@ import {
   GAME_FETCH_FAILED,
   GAME_FETCH_LOADING,
   GAME_FETCH_SUCCEEDED,
+  TOGGLE_FAVORITE_GAME,
+  TOGGLE_FAVORITE_GAME_SUCESS,
 } from '../actions';
 import { ActionsSaga, InitialState } from '../interfaces/saga';
 
@@ -26,7 +28,7 @@ export default function reduxSagaReducer(
     case GAME_FETCH_SUCCEEDED: {
       return {
         ...state,
-        data: action.games,
+        games: action.games,
         loadingFetchGames: false,
       };
     }
@@ -35,6 +37,18 @@ export default function reduxSagaReducer(
         ...state,
         loadingFetchGames: false,
         error: action.message,
+      };
+    }
+    case TOGGLE_FAVORITE_GAME: {
+      return {
+        ...state,
+        game_id: action.game_id,
+      };
+    }
+    case TOGGLE_FAVORITE_GAME_SUCESS: {
+      return {
+        ...state,
+        games: action.games,
       };
     }
     default: {

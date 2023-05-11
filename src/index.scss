@@ -7,6 +7,7 @@ $primary-color: #537188;
 $secondary-color: #e1d4bb;
 $font-color: #000;
 $second-font-color: #fff;
+$box-shadow-color: #00000033;
 
 body {
   margin: 0;
@@ -20,4 +21,25 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#drawer-menu {
+  min-width: 300px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+
+  li {
+    margin-left: 30%;
+    font-size: 30px;
+    list-style: none;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: $font-color;
+    }
+  }
 }

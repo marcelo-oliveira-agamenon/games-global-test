@@ -1,3 +1,5 @@
+import './style.scss';
+
 export default function Favorites() {
-  return <div>Favorites</div>;
+  return <div id="favorites-container">Favorites</div>;
 }

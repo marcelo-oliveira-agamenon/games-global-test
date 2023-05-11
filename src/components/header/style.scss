@@ -13,7 +13,9 @@
     cursor: pointer;
   }
 
-  h1 {
+  a {
+    font-size: 30px;
     color: $second-font-color;
+    text-decoration: none;
   }
 }
