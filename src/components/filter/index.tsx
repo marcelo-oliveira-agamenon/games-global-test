@@ -3,7 +3,7 @@ import { IFilter, filterKeys, filterTypes } from '../../interfaces/filter';
 import { Game } from '../../interfaces/game';
 import './style.scss';
 
-function Filter({ games, onChangeFilter }: IFilter) {
+function Filter({ games, disabled, onChangeFilter }: IFilter) {
   const [filterBy, setFilterBy] = useState<filterKeys | null>();
   const [sortBy, setSortBy] = useState<filterTypes | null>();
 
@@ -26,7 +26,8 @@ function Filter({ games, onChangeFilter }: IFilter) {
           setFilterBy(event.target.value as filterKeys);
           handleFilter(event.target.value as filterKeys, sortBy || 'ascending');
         }}
-        defaultValue={''}>
+        defaultValue={''}
+        disabled={disabled}>
         <option value="" disabled>
           Choose a Filter by
         </option>
@@ -41,7 +42,8 @@ function Filter({ games, onChangeFilter }: IFilter) {
           setSortBy(event.target.value as filterTypes);
           handleFilter(filterBy || 'name', event.target.value as filterTypes);
         }}
-        defaultValue={''}>
+        defaultValue={''}
+        disabled={disabled}>
         <option value="" disabled>
           Choose a Sort by
         </option>

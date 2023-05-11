@@ -3,12 +3,8 @@
 #games-page {
   padding: 15px;
 
-  .game-title {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
   .games-container {
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;

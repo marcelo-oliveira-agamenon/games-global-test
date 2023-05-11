@@ -1,11 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Drawer } from '@mui/material';
+import { loadFetchGame } from './actions';
 import Header from './components/header';
 import './index.scss';
 
 function App() {
   const [drawerState, setDrawerState] = useState(false);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadFetchGame());
+  }, [dispatch]);
 
   return (
     <div>

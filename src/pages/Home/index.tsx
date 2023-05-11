@@ -1,20 +1,17 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { loadFetchGame } from '../../actions';
-import { InitialState } from '../../interfaces/saga';
+import './style.scss';
 
 function Home() {
-  const dispatch = useDispatch();
-  const games = useSelector((state: InitialState) => state.games);
-
-  useEffect(() => {
-    dispatch(loadFetchGame());
-  }, [dispatch]);
-
   return (
-    <div>
-      <>{console.log('home ', games)}</>
-      <h1>Home</h1>
+    <div id="home">
+      <div className="welcome-container">
+        <h1>Welcome to Gamble&apos;s Den</h1>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque deleniti quia earum
+          eligendi totam nostrum blanditiis culpa, laborum saepe, illum quas ab aliquid, ipsa iste
+          corporis officia accusamus maxime natus.
+        </p>
+      </div>
     </div>
   );
 }

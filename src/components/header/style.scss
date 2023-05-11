@@ -11,9 +11,15 @@
     margin-right: 25px;
     margin-left: 10px;
     cursor: pointer;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   a {
+    margin-bottom: 5px;
     font-size: 30px;
     color: $second-font-color;
     text-decoration: none;

@@ -2,6 +2,7 @@ import { Game } from './game';
 
 export interface IFilter {
   games: Game[];
+  disabled: boolean;
   onChangeFilter: (games: Game[]) => void;
 }
 

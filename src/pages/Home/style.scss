@@ -1,0 +1,18 @@
+@import '../../index.scss';
+
+#home {
+  padding: 15px;
+
+  .welcome-container {
+    border-radius: 10px;
+    background-color: $secondary-color;
+    text-align: center;
+    padding: 15px;
+    margin-top: 70px;
+
+    p {
+      margin-top: 30px;
+      line-height: 30px;
+    }
+  }
+}
