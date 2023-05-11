@@ -4,3 +4,5 @@
 npx --no-install jest
 npx --no-install jest
 npx --no-install jest
+npx --no-install jest
+npx --no-install jest
