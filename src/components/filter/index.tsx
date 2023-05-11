@@ -10,10 +10,8 @@ function Filter({ games, onChangeFilter }: IFilter) {
   const handleFilter = (key: filterKeys, type: filterTypes) => {
     const auxGames = games.sort((first, second) => {
       const localType: keyof Game = key as unknown as any;
-      if (first[localType] < second[localType])
-        return type === 'ascending' ? -1 : 1;
-      if (first[localType] > second[localType])
-        return type === 'ascending' ? 1 : -1;
+      if (first[localType] < second[localType]) return type === 'ascending' ? -1 : 1;
+      if (first[localType] > second[localType]) return type === 'ascending' ? 1 : -1;
       return 0;
     });
 
@@ -28,8 +26,7 @@ function Filter({ games, onChangeFilter }: IFilter) {
           setFilterBy(event.target.value as filterKeys);
           handleFilter(event.target.value as filterKeys, sortBy || 'ascending');
         }}
-        defaultValue={''}
-      >
+        defaultValue={''}>
         <option value="" disabled>
           Choose a Filter by
         </option>
@@ -44,8 +41,7 @@ function Filter({ games, onChangeFilter }: IFilter) {
           setSortBy(event.target.value as filterTypes);
           handleFilter(filterBy || 'name', event.target.value as filterTypes);
         }}
-        defaultValue={''}
-      >
+        defaultValue={''}>
         <option value="" disabled>
           Choose a Sort by
         </option>

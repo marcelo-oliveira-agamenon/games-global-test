@@ -6,7 +6,7 @@ import {
   GAME_FETCH_LOADING,
   GAME_FETCH_SUCCEEDED,
   TOGGLE_FAVORITE_GAME,
-  TOGGLE_FAVORITE_GAME_SUCESS,
+  TOGGLE_FAVORITE_GAME_SUCESS
 } from '../actions';
 import { Game } from '../interfaces/game';
 
@@ -25,8 +25,8 @@ function* toggleGameFavoriteSaga({ game_id }: ActionsSaga) {
     type: TOGGLE_FAVORITE_GAME_SUCESS,
     games: [
       ...(games as Game[]).filter((game) => game.id !== game_id),
-      Object.assign({}, (games as Game[])[(game_id as number) - 1]),
-    ],
+      Object.assign({}, (games as Game[])[(game_id as number) - 1])
+    ]
   });
 }
 

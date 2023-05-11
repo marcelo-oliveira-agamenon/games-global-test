@@ -12,7 +12,7 @@ export default function Header({ onOpenSidebar }: IHeader) {
         icon menu
       </div>
 
-      <Link to="/">Gamble's Den</Link>
+      <Link to="/">Gamble&apos;s Den</Link>
     </div>
   );
 }

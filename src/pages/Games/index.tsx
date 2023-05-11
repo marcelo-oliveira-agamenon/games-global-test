@@ -19,10 +19,7 @@ export default function Games() {
     <div id="games-page">
       <h1 className="game-title">Games</h1>
 
-      <Filter
-        games={games}
-        onChangeFilter={(games) => setLocalGames([...games])}
-      />
+      <Filter games={games} onChangeFilter={(games) => setLocalGames([...games])} />
 
       <div className="games-container">
         {localGames && localGames.length !== 0

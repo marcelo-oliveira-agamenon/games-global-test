@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.scss';
 import App from './App';
 import Home from './pages/Home';
@@ -14,9 +10,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { configureReduxStore } from './store';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <Provider store={configureReduxStore()}>

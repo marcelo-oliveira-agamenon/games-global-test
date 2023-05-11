@@ -9,11 +9,7 @@ function App() {
 
   return (
     <div>
-      <Drawer
-        anchor="left"
-        open={drawerState}
-        onClose={() => setDrawerState(false)}
-      >
+      <Drawer anchor="left" open={drawerState} onClose={() => setDrawerState(false)}>
         <ul id="drawer-menu">
           <li>
             <Link to="/" onClick={() => setDrawerState(false)}>

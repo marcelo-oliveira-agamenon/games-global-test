@@ -53,9 +53,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx,json,md}": [
-      "eslint — fix"
-    ],
-    "**/*": "prettier — write — ignore-unknown"
+      "eslint \"./**/*.{ts,tsx}\""
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",

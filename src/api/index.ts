@@ -8,7 +8,7 @@ let data: Game[] = [
     popularity: 'high',
     rating: 5,
     category: 'Card',
-    isFavorite: false,
+    isFavorite: false
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ let data: Game[] = [
     popularity: 'high',
     rating: 4,
     category: 'Card',
-    isFavorite: false,
+    isFavorite: false
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ let data: Game[] = [
     popularity: 'high',
     rating: 5,
     category: 'Table',
-    isFavorite: false,
+    isFavorite: false
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ let data: Game[] = [
     popularity: 'high',
     rating: 4,
     category: 'Table',
-    isFavorite: false,
+    isFavorite: false
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ let data: Game[] = [
     popularity: 'high',
     rating: 5,
     category: 'Table',
-    isFavorite: false,
+    isFavorite: false
   },
   {
     id: 6,
@@ -53,8 +53,8 @@ let data: Game[] = [
     popularity: 'high',
     rating: 5,
     category: 'Slots',
-    isFavorite: false,
-  },
+    isFavorite: false
+  }
 ];
 
 export function fetchGames(): Game[] {

@@ -8,7 +8,7 @@ const sagaMiddleware = createSagaMiddleware();
 export function configureReduxStore() {
   const store = configureStore({
     reducer: reduxSagaReducer,
-    middleware: (getMiddleware) => getMiddleware().concat(sagaMiddleware),
+    middleware: (getMiddleware) => getMiddleware().concat(sagaMiddleware)
   });
 
   sagaMiddleware.run(mySaga);
