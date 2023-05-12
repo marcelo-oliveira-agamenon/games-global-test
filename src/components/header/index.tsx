@@ -9,7 +9,7 @@ interface IHeader {
 export default function Header({ onOpenSidebar }: IHeader) {
   return (
     <div id="header">
-      <div className="icon" onClick={onOpenSidebar}>
+      <div className="icon" aria-label="menu-icon" onClick={onOpenSidebar}>
         <img src={MenuIcon} alt="menuIcon" />
       </div>
 
