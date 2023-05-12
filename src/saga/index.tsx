@@ -19,13 +19,13 @@ function* fetchGamesSaga() {
   }
 }
 
-function* toggleGameFavoriteSaga({ game_id }: ActionsSaga) {
+function* toggleGameFavoriteSaga({ game: localGame }: ActionsSaga) {
   const games: ResponseGenerator = yield call(fetchGames);
   yield put({
     type: TOGGLE_FAVORITE_GAME_SUCESS,
     games: [
-      ...(games as Game[]).filter((game) => game.id !== game_id),
-      Object.assign({}, (games as Game[])[(game_id as number) - 1])
+      ...(games as Game[]).filter((game) => game.id !== localGame?.id),
+      Object.assign({}, localGame)
     ]
   });
 }

@@ -13,12 +13,12 @@ export interface InitialState {
   games: Game[];
   loadingFetchGames: boolean;
   errorFetchGames: string;
-  game_id?: number;
+  game_id?: Game;
 }
 
 export interface ActionsSaga {
   type: string;
   games: Game[];
-  game_id?: number;
+  game?: Game;
   message?: string;
 }

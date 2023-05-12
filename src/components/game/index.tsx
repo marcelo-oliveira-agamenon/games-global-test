@@ -4,11 +4,16 @@ import { Game } from '../../interfaces/game';
 import { toggleFavoriteGame } from '../../actions';
 import './style.scss';
 
-function GameCard({ id, category, isFavorite, name, picture, popularity, rating }: Game) {
+function GameCard(game: Game) {
+  const { id, category, isFavorite, name, picture, popularity, rating } = game;
   const dispatch = useDispatch();
 
   const toggleFavorite = () => {
-    dispatch(toggleFavoriteGame(id));
+    const auxGame = {
+      ...game,
+      isFavorite: !isFavorite
+    };
+    dispatch(toggleFavoriteGame(auxGame));
   };
 
   return (

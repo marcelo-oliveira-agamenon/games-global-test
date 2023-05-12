@@ -39,7 +39,7 @@ export default function reduxSagaReducer(state = initialState, action: ActionsSa
     case TOGGLE_FAVORITE_GAME: {
       return {
         ...state,
-        game_id: action.game_id
+        game_id: action.game
       };
     }
     case TOGGLE_FAVORITE_GAME_SUCESS: {

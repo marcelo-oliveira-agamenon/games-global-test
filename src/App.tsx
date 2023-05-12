@@ -18,25 +18,41 @@ function App() {
   return (
     <div>
       <Drawer anchor="left" open={drawerState} onClose={() => setDrawerState(false)}>
-        <ul id="drawer-menu">
-          <li>
+        <ol id="drawer-menu">
+          <li className="list-menu">
             <Link to="/" onClick={() => setDrawerState(false)}>
               Home
             </Link>
           </li>
 
-          <li>
+          <li className="list-menu">
             <Link to="/games" onClick={() => setDrawerState(false)}>
               Games
             </Link>
+            <ul className="second-level-menu">
+              <li>Slots</li>
+              <li>
+                Table Games
+                <ul className="third-level-menu">
+                  <li>Roulette</li>
+                </ul>
+              </li>
+              <li>
+                Card Games
+                <ul className="third-level-menu">
+                  <li>Blackjack</li>
+                  <li>Poker</li>
+                </ul>
+              </li>
+            </ul>
           </li>
 
-          <li>
+          <li className="list-menu">
             <Link to="/favorites" onClick={() => setDrawerState(false)}>
               Favorites
             </Link>
           </li>
-        </ul>
+        </ol>
       </Drawer>
 
       <Header onOpenSidebar={() => setDrawerState(true)} />
